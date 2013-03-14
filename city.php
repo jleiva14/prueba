@@ -10,6 +10,7 @@
 
 <a href="http://dev.mysql.com/doc/" target="blank_"> MySQL Documentation </a><br><br>
 <?php
+	include("navigation.php");
 	require("connection_city.php");
 	
 	while ($row = $query_results->fetch_assoc()){
