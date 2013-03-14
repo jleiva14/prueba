@@ -10,7 +10,27 @@
 <h1>Cities of the world</h1>
 <?php
 	include("navigation.php");
-	require("connection_cities.php");
+	
+	$dbhost = 'localhost';
+	$dbuser = 'root';
+	$dbpass = '123';
+	$db = 'world';
+	
+	$linkID1 = new mysqli($dbhost,$dbuser,$dbpass,$db);
+	
+	if($linkID1->connect_error){
+		echo "Connection Error ($linkID1->connect_errno)$linkID1->connect_error\n";
+		exit;
+	}
+	
+	$query_results = $linkID1->query("SELECT ID,Name FROM City");
+	
+	if(!$query_results){
+		echo "Query Error: $linkID1->error";
+		exit;
+	}
+	
+	
 	while ($row = $query_results->fetch_assoc()){
 		$dir = "city.php?id=".$row['ID'];
 		echo $row["ID"]," - ","<a href=".$dir.">",$row['Name'],"</a><br/>";
