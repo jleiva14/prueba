@@ -40,6 +40,7 @@
 	}
 	else{
 		echo "<h1>Modificacion OK</h1>";
+		echo "<a href = 'http://localhost/project/city.php?id=$id_ciudad'> Volver </a>";
 	}
 
 	$conexion->close();

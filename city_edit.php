@@ -7,7 +7,6 @@
    
 </head>
 <body>
-<h1>Cities of the world</h1>
 <?php
 	include("navigation.php");
 	require("connection_edit_city.php");
