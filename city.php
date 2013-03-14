@@ -29,7 +29,7 @@
 		echo "<p>Distrito: $distrito</p>";
 		echo "<p>Wikipedia Link: <a target=_blank href=".$dirWiki.">",$row['Name'],"</a> </p>";
 		echo "<br /><p><a href=city_edit.php?id=".$id_ciudad.">Edit</a> </p>";
-		echo "<br /><p><a href=city_delete.php?id=".$id_ciudad.">Delete</a> </p>";
+		echo "<p><a href=city_delete.php?id=".$id_ciudad.">Delete</a> </p>";
 	}
 	
 	$query_results->close();
