@@ -17,6 +17,7 @@
 		$countryCode = $row["CountryCode"];
 		$distrito = $row["District"];
 		$poblacion = $row["Population"];
+		$id = $row["ID"];
 	}
 	?>
 

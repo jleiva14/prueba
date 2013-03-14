@@ -13,6 +13,7 @@
 	
 	$id_ciudad = $_GET["id"];
 	
+	
 	$query_ciudad = $conexion->query("SELECT ID,CountryCode,Name,District,Population FROM City Where ID=$id_ciudad");
 	$query_pais = $conexion->query("SELECT Code,Name FROM Country ORDER BY Name");
 	
