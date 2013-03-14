@@ -32,7 +32,7 @@
 		$nombre = $row['Name'];
 		$nombrewiki = str_replace(" ","_",$row['Name']);
 		$code = $row['Code'];
-		$dir = "mysqli_GETwiki.php?code=".$row['Code']."&wiki=".$nombrewiki;
+		$dir = "country.php?code=".$row['Code'];
 
 		echo $row["Name"]," | ","<a name='$code' href=".$dir.">",$row['Code'],"</a><br/>";
 	}
