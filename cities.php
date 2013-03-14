@@ -9,6 +9,7 @@
 <body>
 <h1>Cities of the world</h1>
 <?php
+	include("navigation.php");
 	require("connection_cities.php");
 	while ($row = $query_results->fetch_assoc()){
 		$dir = "city.php?id=".$row['ID'];
