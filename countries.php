@@ -12,6 +12,7 @@
 <a href="http://dev.mysql.com/doc/" target="blank_"> MySQL Documentation </a><br><br>
 <?php
 	//require("connection_info.php");
+	include("navigation.php");
 	$linkID1 = new mysqli("localhost","root","123","world");
 	
 	if($linkID1->connect_error){
