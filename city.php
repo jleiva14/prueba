@@ -8,10 +8,9 @@
 </head>
 <body>
 
-<a name = "inicio"><h1>Cities of the World</h1></a>
 <a href="http://dev.mysql.com/doc/" target="blank_"> MySQL Documentation </a><br><br>
 <?php
-	require("connection_info.php");
+	require("connection_city.php");
 	
 	while ($row = $query_results->fetch_assoc()){
 		$nombre = $row['Name'];
@@ -34,8 +33,6 @@
 	
 	$linkID1->close();
 ?>
-
-<br><a href="#inicio">Go to the top of the page</a>
 
 </body>
 </html>
