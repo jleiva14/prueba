@@ -11,9 +11,11 @@
 <a name = "inicio"><h1>Countries of the World</h1></a>
 <a href="http://dev.mysql.com/doc/" target="blank_"> MySQL Documentation </a><br><br>
 <?php
-	//require("connection_info.php");
+	require("security.php");
 	include("navigation.php");
-	$linkID1 = new mysqli("localhost","root","123","world");
+	include("connection_info.php");
+	
+	$linkID1 = new mysqli($dbhost,$dbuser,$dbpass,$db);
 	
 	if($linkID1->connect_error){
 		echo "Connection Error ($linkID1->connect_errno)$linkID1->connect_error\n";

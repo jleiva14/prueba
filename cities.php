@@ -9,12 +9,9 @@
 <body>
 <h1>Cities of the world</h1>
 <?php
+	require("security.php");
 	include("navigation.php");
-	
-	$dbhost = 'localhost';
-	$dbuser = 'root';
-	$dbpass = '123';
-	$db = 'world';
+	include("connection_info.php");
 	
 	$linkID1 = new mysqli($dbhost,$dbuser,$dbpass,$db);
 	

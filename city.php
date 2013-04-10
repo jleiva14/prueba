@@ -10,13 +10,9 @@
 
 <a href="http://dev.mysql.com/doc/" target="blank_"> MySQL Documentation </a><br><br>
 <?php
+	require("security.php");
 	include("navigation.php");
-	
-	
-	$dbhost = 'localhost';
-	$dbuser = 'root';
-	$dbpass = '123';
-	$db = 'world';
+	include("connection_info.php");
 	
 	$linkID1 = new mysqli($dbhost,$dbuser,$dbpass,$db);
 	

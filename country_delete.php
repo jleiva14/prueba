@@ -8,14 +8,10 @@
 </head>
 <body>
 <?php
+	require("security.php");
 	include("navigation.php");
+	include("connection_info.php");
 	
-	$dbhost = 'localhost';
-	$dbuser = 'root';
-	$dbpass = '123';
-	$db = 'world';
-	
-	//recoger datos POST
 	$code=$_GET["code"];
 	
 	$conexion = new mysqli($dbhost,$dbuser,$dbpass,$db);

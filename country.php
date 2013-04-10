@@ -9,8 +9,11 @@
 <body>
 
 <?php
+	require("security.php");
 	include("navigation.php");
-	$linkID1 = new mysqli("localhost","root","123","world");
+	include("connection_info.php");
+	
+	$linkID1 = new mysqli($dbhost,$dbuser,$dbpass,$db);
 	
 	if($linkID1->connect_error){
 		echo "Connection Error ($linkID1->connect_errno)$linkID1->connect_error\n";
@@ -37,10 +40,12 @@
 		$dir = "#";	
 			
 		echo "<h1>$nombre</h1>";
-		echo "<p>Country Code:<a name='$CountryCode' href=".$dir.">",$row['Code'],"</a></p>";
+		echo "<p>Country Code:$CountryCode</a></p>";
 		echo "<p>Population:$poblacion</p>";
-		echo "<p>Continente</p>";
+		echo "<p>Continente:$continente</p>";
 		echo "<p>Wikipedia Link: <a target=_blank href=".$dirWiki.">",$row['Name'],"</a> </p>";
+		echo "<br /><p><a href=country_edit.php?code=".$CountryCode.">Edit</a> </p>";
+		echo "<p><a href=country_delete.php?code=".$CountryCode.">Delete</a> </p>";
 	}
 	
 	$query_results->close();

@@ -8,13 +8,9 @@
 </head>
 <body>
 <?php
+	require("security.php");
 	include("navigation.php");
-	
-	
-	$dbhost = 'localhost';
-	$dbuser = 'root';
-	$dbpass = '123';
-	$db = 'world';
+	include("connection_info.php");
 	
 	$conexion = new mysqli($dbhost,$dbuser,$dbpass,$db);
 	
